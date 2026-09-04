@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
+
+:root {
+    --matcha: #345c43;
+    --matcha-dark: #173525;
+    --cream: #f5f4e9;
+    --latte: #e4ead7;
+    --copper: #b4c957;
+    --sage: #78956d;
+    --ink: #24352b;
+    --line: #cbd8c4;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--ink);
+    background: var(--cream);
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand, .nav-link, .btn, .badge, .form-label, .small-copy {
+    font-family: "DM Sans", sans-serif;
+}
+
+h1, h2, h3, h4 {
+    color: var(--matcha-dark);
+    font-weight: 700;
+}
+.Tagline {
+    color:white;
+    
+}
+.navbar {
+    background: var(--matcha-dark) !important;
+    box-shadow: 0 8px 24px rgba(23, 53, 37, .14);
+}
+
+.navbar-brand {
+    color: #fff !important;
+    font-size: 1.2rem;
+    letter-spacing: .02em;
+    font-weight: 700;
+}
+
+.brand-mark {
+    display: inline-grid;
+    width: 2.5rem;
+    height: 2.5rem;
+    place-items: center;
+    border: 1px solid rgba(255,255,255,.65);
+    border-radius: 50%;
+    color: var(--copper);
+    font-size: .8rem;
+    font-family: "Fraunces", serif;
+}
+
+.nav-link {
+    color: rgba(255,255,255,.75) !important;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--copper) !important;
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--copper);
+    --bs-btn-border-color: var(--copper);
+    --bs-btn-color: var(--matcha-dark);
+    --bs-btn-hover-bg: #c7da6d;
+    --bs-btn-hover-border-color: #c7da6d;
+    --bs-btn-hover-color: var(--matcha-dark);
+    font-weight: 700;
+}
+
+.btn-outline-light:hover {
+    color: var(--matcha-dark);
+}
+
+.text-copper { color: var(--copper); }
+.bg-coffee { background: var(--matcha); }
+.bg-sage { background: var(--sage); }
+.bg-latte { background: var(--latte); }
+
+.hero {
+    min-height: 600px;
+    background-image: url("./HeroBanner.png ");
+     background-repeat: no-repeat; 
+
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    position: relative;
+}
+
+.hero::before {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(16, 39, 27, .78), rgba(16, 39, 27, .22));
+    content: "";
+}
+
+.hero .container { position: relative; z-index: 1; }
+.hero-content { max-width: 620px; }
+.hero h1 { color: #fff; font-size: clamp(2.8rem, 7vw, 5.8rem); line-height: .98; }
+.hero h3 { color: #fff; font-family: "Fraunces", serif; font-size: clamp(2.8rem, 7vw, 5.8rem); line-height: .98; }
+.hero p { color: rgba(255,255,255,.84); font-size: 1.15rem; }
+
+.section-kicker {
+    color: var(--matcha);
+    font-family: "DM Sans", sans-serif;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--latte), #c3d4b7);
+    color: var(--matcha);
+    font-family: "DM Sans", sans-serif;
+    font-size: .75rem;
+    letter-spacing: .12em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.hero .image-placeholder { min-height: 320px; background: rgba(228,234,215,.18); color: #fff; border: 1px dashed rgba(255,255,255,.6); }
+.card { border: 1px solid var(--line); border-radius: .75rem; overflow: hidden; background: rgba(255,255,255,.5); box-shadow: 0 12px 30px rgba(52, 92, 67, .08); }
+.card-title { color: var(--matcha); }
+.product-card .image-placeholder {
+    aspect-ratio: 1 / 1;
+    height: auto;
+    min-height: 0;
+    object-fit: contain;
+    background: var(--latte);
+}
+.product-card .card-body {
+    padding: 1.35rem;
+}
+.product-card .card-body > .d-flex:last-child {
+    margin-top: auto;
+    padding-top: .75rem;
+}
+.featured-carousel .product-card .image-placeholder {
+    height: clamp(300px, 52vw, 600px);
+    object-fit: contain;
+    background: var(--latte);
+}
+.price { color: var(--matcha); font-family: "DM Sans", sans-serif; font-weight: 700; }
+.featured-carousel { padding: 0 3.5rem; }
+.featured-carousel .carousel-control-prev,
+.featured-carousel .carousel-control-next { width: 2.5rem; height: 2.5rem; top: 50%; margin-top: -1.25rem; border-radius: 50%; background: var(--matcha); opacity: 1; }
+.featured-carousel .carousel-control-prev { left: 0; }
+.featured-carousel .carousel-control-next { right: 0; }
+.featured-carousel .carousel-indicators { position: static; margin: 1.5rem 0 0; }
+.featured-carousel .carousel-indicators [data-bs-target] { width: .6rem; height: .6rem; border: 0; border-radius: 50%; background: var(--matcha); }
+
+.feature-icon {
+    width: 3rem;
+    height: 3rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--latte);
+    color: var(--matcha);
+    font-size: 1.25rem;
+}
+
+.page-header { padding: 5rem 0 4rem; background: var(--latte); border-bottom: 1px solid var(--line); }
+.page-header h1 { font-family: "Fraunces", serif; font-size: clamp(2.5rem, 6vw, 4.5rem); }
+.timeline { border-left: 2px solid var(--copper); }
+.timeline-item { position: relative; padding-left: 2rem; }
+.timeline-item::before {
+    position: absolute;
+    top: .35rem;
+    left: -.52rem;
+    width: .9rem;
+    height: .9rem;
+    border: 3px solid var(--cream);
+    border-radius: 50%;
+    background: var(--copper);
+    content: "";
+}
+
+.form-control, .form-control:focus { border-color: var(--line); box-shadow: none; background: rgba(255,255,255,.7); }
+.form-control:focus { border-color: var(--copper); }
+footer { background: var(--matcha-dark); color: rgba(255,255,255,.72); }
+footer h2, footer h3 { color: #fff; }
+footer a { color: var(--copper); text-decoration: none; }
+footer a:hover { color: #fff; }
+.social-link { font-size: 1.25rem; }
+
+@media (max-width: 767.98px) {
+    .container > .row { margin-right: 0; margin-left: 0; }
+    .hero { min-height: 560px; }
+    .hero .image-placeholder { min-height: 100px; margin-top: 2rem; }
+    .featured-carousel { padding: 0 2.75rem; }
+}
